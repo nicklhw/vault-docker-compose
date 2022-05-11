@@ -8,9 +8,9 @@ Stand up a 3 nodes Vault Enterprise demo environment quickly using Docker compos
 1. Obtain a Vault Enterprise license.
 2. Install [Docker Compose](https://docs.docker.com/compose/install/#install-compose), it should come with Docker Desktop on Mac.
 3. `make all` to start the docker containers.
-3  `make token` copies the root token on your clip board that you can use to login.
-4  `make ui` opens the Vault UI on your default browser.
-5. `make clean` to tear down the environment
+4.  `make token` copies the root token on your clip board that you can use to login.
+5.  `make ui` opens the Vault UI on your default browser.
+6. `make clean` to tear down the environment
 
 # Resources
 
