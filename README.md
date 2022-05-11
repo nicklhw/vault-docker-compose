@@ -1,4 +1,4 @@
-# Vault Terraform Demo with Docker Compose 
+# Vault Enterprise Demo with Docker Compose 
 
 **THIS REPO IS NOT FOR PRODUCTION USE**
 
