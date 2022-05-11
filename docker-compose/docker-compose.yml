@@ -1,0 +1,60 @@
+version: '3.7'
+
+networks:
+  vault:
+    ipam:
+      driver: default
+      config:
+        - subnet: "10.5.0.0/16"
+
+services:
+  vault_s1:
+    image: hashicorp/vault-enterprise:latest
+    #image: hashicorp/vault:latest
+    restart: always
+    volumes:
+      - ./vault/vault_s1:/vault/config:rw
+      - /vault/data
+      - /etc/vault/logs
+    ports:
+      - "8200:8200/tcp"
+    cap_add:
+      - IPC_LOCK
+    container_name: vault_s1
+    entrypoint: "vault server -config=/vault/config"
+    networks:
+      - vault
+
+  vault_s2:
+    image: hashicorp/vault-enterprise:latest
+    #image: hashicorp/vault:latest
+    restart: always
+    volumes:
+      - ./vault/vault_s2:/vault/config:rw
+      - /vault/data
+      - /etc/vault/logs
+    ports:
+      - "18200:8200/tcp"
+    cap_add:
+      - IPC_LOCK
+    container_name: vault_s2
+    entrypoint: "vault server -config=/vault/config"
+    networks:
+      - vault
+
+  vault_s3:
+    image: hashicorp/vault-enterprise:latest
+    #image: hashicorp/vault:latest
+    restart: always
+    volumes:
+      - ./vault/vault_s3:/vault/config:rw
+      - /vault/data
+      - /etc/vault/logs
+    ports:
+      - "28200:8200/tcp"
+    cap_add:
+      - IPC_LOCK
+    container_name: vault_s3
+    entrypoint: "vault server -config=/vault/config"
+    networks:
+      - vault
