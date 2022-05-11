@@ -1,6 +1,8 @@
 # Vault Terraform Demo with Docker Compose 
 
-Stand up a 3 nodes Vault Enterprise environment using Docker compose.
+**THIS REPO IS NOT FOR PRODUCTION USE**
+
+Stand up a 3 nodes Vault Enterprise demo environment quickly using Docker compose.
 
 # Quick Start
 1. Obtain a Vault Enterprise license.
