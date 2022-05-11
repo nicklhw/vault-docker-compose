@@ -12,11 +12,11 @@ admin:
 	cd scripts && ./admin.sh
 
 up:
-	docker compose up
+	docker-compose up
 
 up-detach:
 	cd docker-compose \
-	  && docker compose up --detach
+	  && docker-compose up --detach
 
 init:
 	cd docker-compose/scripts \
@@ -24,7 +24,7 @@ init:
 
 clean:
 	cd docker-compose \
-	  && docker compose down
+	  && docker-compose down
 
 secret:
 	cd terraform && terraform init && terraform apply -var-file="secrets.tfvars" --auto-approve
