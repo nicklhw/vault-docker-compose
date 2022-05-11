@@ -8,6 +8,7 @@ Stand up a 3 nodes Vault Enterprise environment using Docker compose.
 3. `make all` to start the docker containers.
 3  `make token` copies the root token on your clip board that you can use to login.
 4  `make ui` opens the Vault UI on your default browser.
+5. `make clean` to tear down the environment
 
 # Resources
 
